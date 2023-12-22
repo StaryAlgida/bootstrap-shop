@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Vite</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script type="module" defer src="./js/main.js"></script>
+</head>
+<body>
+<nav class="container-sm navbar navbar-expand-lg bg-body-tertiary rounded">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Best sellers</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div class="d-flex gap-2 mt-2 mt-lg-0 ms-lg-4">
+                <div class="p-1 nav-item rounded border border-2 border-primary">
+                    <a class="nav-link fw-semibold" href="#">Login</a>
+                </div>
+                <div class="p-1 nav-item rounded border border-2 border-primary">
+                    <a class="nav-link fw-semibold" href="#">Singup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="container py-lg-4 mx-auto">
+        <section class="container">
+            <div class="row mt-5">
+                <!--Carusel-->
+                <div id="carouselExampleDark" class="carousel carousel-dark slide col-12 col-lg-6" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="./img/picture1.png" class="d-block w-100" alt="blue t-shirt">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/picture2.png" class="d-block w-100" alt="blue t-shirt">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/picture3.png" class="d-block w-100" alt="man with blue t-shirt">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/picture4.png" class="d-block w-100" alt="man with blue t-shirt">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/picture5.png" class="d-block w-100" alt="man with blue t-shirt">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/picture6.png" class="d-block w-100" alt="man with blue t-shirt">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!--Title, price, options -->
+                <div class="col-12 col-lg-6">
+                    <a href="#" class="mb-4 d-block link-success link-underline-opacity-0 fw-medium">Super shop</a>
+                    <h1>T-shirt</h1>
+                    <p class="fs-4">Price: <span class="fw-semibold">19.99$</span></p>
+                    <div>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                        <span>(123 reviews)</span>
+                    </div>
+                    <hr>
+                    <!--Size-->
+                    <div>
+                        <span class="fs-5">Size:</span>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnsize" id="btnradio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="btnradio1">XS</label>
+
+                            <input type="radio" class="btn-check" name="btnsize" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio2">S</label>
+
+                            <input type="radio" class="btn-check" name="btnsize" id="btnradio3" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio3">M</label>
+
+                            <input type="radio" class="btn-check" name="btnsize" id="btnradio4" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio4">L</label>
+
+                            <input type="radio" class="btn-check" name="btnsize" id="btnradio5" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio5">XL</label>
+                        </div>
+                    </div>
+                    <!--Color-->
+                    <div class="mt-3">
+                        <span class="fs-5">Color:</span>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btncolor1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="btncolor1">Red</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btncolor2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btncolor2">Yellow</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btncolor3" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btncolor3">Blue</label>
+                        </div>
+                    </div>
+                <!--Quantity-->
+                    <div class="input-group my-3">
+                        <span class="input-group-text" id="basic-addon1">Quantity:</span>
+                        <input type="number" class="form-control" placeholder="1" min="1" inputmode="numeric" aria-label="Product quantity" aria-describedby="button-addon2 basic-addon1">
+                        <button class="btn btn-outline-success fw-semibold" type="button" id="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to card</button>
+                    </div>
+    <!--                Modal-->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Item added to cart</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    Item successfully added to the cart!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+    <!--                Extra info-->
+                    <div class="container">
+                        <div class="row">
+                            <p class="col-4">Product Code:</p>
+                            <p class="col-8">FBB00255</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-4">Availability:</p>
+                            <p class="col-8">In Stock</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-4">Type:</p>
+                            <p class="col-8">Clothes</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-4">Shipping:</p>
+                            <p class="col-8">1 day shipping. ( Free pickup today)</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-4">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+<!--                    <a class="nav-link active text-success fw-medium" aria-current="page" href="#">Product Details</a>-->
+                    <button class="nav-link active" id="product-tab" data-bs-toggle="tab" data-bs-target="#product-tab-panel" type="button" aria-controls="product-tab-pane" aria-selected="true">Product Details</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details-tab-panel" type="button" aria-controls="details-tab-pane" aria-selected="false">Information</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-tab-panel" type="button" aria-controls="details-tab-pane" aria-selected="false">Reviews</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black">Seller info</a>
+                </li>
+            </ul>
+            <div class="border border-top-0 p-4 tab-content" id="myTabContent">
+                <div class="tab-pane fade active show" id="product-tab-panel" aria-labelledby="product-tab" tabindex="0" role="tabpanel">
+                    <div>
+                        <h2>Material & Comfort</h2>
+                        <p>The fabric composition of this T-shirt ensures maximum comfort and durability. Crafted from a blend of premium cotton and polyester, it offers a soft feel against the skin while maintaining its shape even after multiple washes.</p>
+                    </div>
+                    <div>
+                        <h3>Design & Style</h3>
+                        <p>With a classic round neck and short sleeves, this T-shirt boasts a versatile design suitable for various occasions. Its minimalistic yet stylish appearance makes it a perfect choice for both casual outings and lounging at home.</p>
+                    </div>
+                    <div>
+                        <h3>Care Instructions</h3>
+                        <p>Machine wash in cold water with similar colors. Tumble dry on low heat or air dry to maintain the fabric's quality. Avoid using bleach or harsh detergents that might affect the color and texture of the T-shirt.</p>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="details-tab-panel" aria-labelledby="details-tab" tabindex="0">
+                    <div class="container">
+                        <h3>Details</h3>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <table class="table table-striped">
+                                    <tbody >
+                                    <tr>
+                                        <td class="ps-4">Weight</td>
+                                        <td class="ps-4">1000 Grams</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Ingredient Type</td>
+                                        <td class="ps-4">Vegetarian</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Brand</td>
+                                        <td class="ps-4">Dmart</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Item Package Quantity</td>
+                                        <td class="ps-4">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Form</td>
+                                        <td class="ps-4">Larry the Bird</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Manufacturer</td>
+                                        <td class="ps-4">Dmart</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Net Quantity</td>
+                                        <td class="ps-4">340.0 Gram</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Product Dimensions	</td>
+                                        <td class="ps-4">9.6 x 7.49 x 18.49 cm</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <table class="table table-striped">
+                                    <tbody>
+                                    <tr>
+                                        <td class="ps-4">ASIN</td>
+                                        <td class="ps-4">SB0025UJ75W</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Best Sellers Rank	</td>
+                                        <td class="ps-4">#2 in Fruits</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Date First Available</td>
+                                        <td class="ps-4">30 April 2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Item Weight</td>
+                                        <td class="ps-4">500g</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Generic Name</td>
+                                        <td class="ps-4">Banana Robusta</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="reviews-tab-panel" aria-labelledby="details-tab" tabindex="0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <h4>Customer reviews</h4>
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="me-2">4.1 out of 5 </span>
+                                    <span>11,130 global</span>
+                                </div>
+                                <p>ratings</p>
+                                <div class="container">
+                                    <div class="row gy-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-nowrap me-3 text-muted">
+                                                5
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                            <div class="progress w-100" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                            </div>
+                                            <span class="ms-2">65%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-nowrap me-3 text-muted">
+                                                4
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                            <div class="progress w-100" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-warning" style="width: 20%"></div>
+                                            </div>
+                                            <span class="ms-2">20%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-nowrap me-3 text-muted">
+                                                3
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                            <div class="progress w-100" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-warning" style="width: 10%"></div>
+                                            </div>
+                                            <span class="ms-2">10%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-nowrap me-3 text-muted">
+                                                2
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                            <div class="progress w-100" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-warning" style="width: 5%"></div>
+                                            </div>
+                                            <span class="ms-2">5%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-nowrap me-3 text-muted">
+                                                1
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                            <div class="progress w-100" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-warning" style="width: 0%"></div>
+                                            </div>
+                                            <span class="ms-2">0%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <h4>Reviews</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row mt-4">
+            <h2>Related Items</h2>
+        </div>
+        <section class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-2">
+            <div class="col">
+                <div class="card">
+                    <img src="./img/picture1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/picture1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" >
+                    <img src="./img/picture1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/picture1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/picture1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<footer class="py-3 mt-5 bg-body-secondary">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-md-8 col-lg-6">
+                <h5 class="mb-2 col-5">Categories</h5>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6 col-lg-6">
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Vegetables & Fruits</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Breakfast & instant food</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Bakery & Biscuits</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Atta, rice & dal</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Sauces & spreads</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Organic & gourmet</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Baby care</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Cleaning essentials</a></div>
+                        </div>
+                        <div class="col-6 col-lg-6">
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Vegetables & Fruits</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Breakfast & instant food</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Bakery & Biscuits</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Atta, rice & dal</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Sauces & spreads</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Organic & gourmet</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Baby care</a></div>
+                            <div><a class="link-secondary link-underline link-underline-opacity-0 fw-medium" href="#">Cleaning essentials</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                <h5 class="mb-2 col-5 text-nowrap">Sign up for the newsletter</h5>
+                <form>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon2">@</span>
+                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon2">
+                    </div>
+                    <div class="d-flex align-content-center gap-2 form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">I agree to receive messages</label>
+                        <button type="submit" class="btn btn-primary ms-3">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

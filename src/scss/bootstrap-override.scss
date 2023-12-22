@@ -1,0 +1,8 @@
+@media (max-width: 576px) {
+  .nav.nav-tabs{
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+}
